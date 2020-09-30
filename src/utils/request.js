@@ -26,7 +26,6 @@ const authRequest = async (url, options = {}, showLoading = true) => {
   options.header = {
     Authorization: 'Bearer ' + store.getters.accessToken
   }
-
   return await request(url, options, showLoading)
 }
 
@@ -70,5 +69,6 @@ const request = async (url, options = {}, showLoading = true) => {
 }
 
 export {
+  authRequest,
   request
 }

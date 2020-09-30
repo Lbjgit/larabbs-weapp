@@ -29,7 +29,7 @@
   wepy.page({
     store,
     computed: {
-      ...mapGetters(['user','isLoggedIn'])
+      ...mapGetters(['user', 'isLoggedIn'])
     },
     methods: {
       // 退出
