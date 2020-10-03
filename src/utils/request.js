@@ -19,7 +19,7 @@ const checkToken = async () => {
   }
 }
 
-// 普通请求
+// 登录后才能请求
 const authRequest = async (url, options = {}, showLoading = true) => {
   await checkToken()
 
