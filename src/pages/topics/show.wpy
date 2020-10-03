@@ -81,14 +81,16 @@
         </div>
       </div>
     </div>
+    <reply-create-link :topicId="topic.id"></reply-create-link>
   </div>
 </template>
 <config>
   {
-  navigationBarTitleText: '话题详情',
-  usingComponents: {
-  "datetime-diff": "~@/components/datetime-diff"
-  }
+    navigationBarTitleText: '话题详情',
+    usingComponents: {
+      "datetime-diff": "~@/components/datetime-diff",
+      "reply-create-link": "~@/components/reply-create-link"
+    }
   }
 </config>
 <script>
@@ -156,6 +158,9 @@
     },
     onLoad(options) {
       this.loadTopic(options.id)
+      eventHub.$on('reply-created', (...args) => {
+        this.loadTopic(options.id)
+      });
     }
   })
 </script>
