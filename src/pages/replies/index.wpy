@@ -36,7 +36,7 @@
     },
     methods: {
       fetchData() {
-        return  getReplies(this.topicId, {
+        return getReplies(this.topicId, {
           page: this.page,
           include: 'user'
         })

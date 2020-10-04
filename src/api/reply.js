@@ -13,7 +13,7 @@ export function getUserReplies(userId, data) {
 }
 
 export function createReply(topicId, data) {
-  return authRequest('topics/'+ topicId +'/replies', {
+  return authRequest('topics/' + topicId + '/replies', {
     method: 'POST',
     data: data
   })
